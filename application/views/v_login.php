@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/dist/css/AdminLTE.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/plugins/iCheck/square/blue.css">
-
-
-
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+
+
 </head>
 
 <body class="hold-transition login-page">
@@ -31,15 +31,17 @@
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg login">Login Sistem</p>
 
-            <form action="../../index2.html" method="post">
+            <?= $this->session->flashdata('info'); ?>
+
+            <form action="<?= base_url() ?>login/proses_login" method="post">
                 <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="Email">
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                    <input type="text" name="username" class="form-control" placeholder="Username" required>
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="row">
