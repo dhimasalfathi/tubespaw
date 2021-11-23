@@ -1,3 +1,8 @@
+<?php
+    if(!empty($this->session->('info'))){?>
+    <div class="alert alert-success" role="alert"><?= $this->session->flashdata('info');?></div> 
+    <?php}
+?>
 <div class = row>
     <div class="col-md-12">
         <a href="<?= base_url()?>anggota/tambah_anggota" class="btn btn-success"> <i class ="fa fa-plus"></i> Tambah Anggota</a>

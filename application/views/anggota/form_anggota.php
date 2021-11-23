@@ -5,25 +5,25 @@
               <h3 class="box-title"><?= $judul;?> </h3>
             </div>
            
-            <form class="form-horizontal">
+            <form method ="post" action="<?= base_url()?>anggota/simpan" class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Id Anggota</label>
                   <div class="col-sm-10">
-                    <input type="text" name="id_anggota" class="form-control" readonly>
+                    <input type="text" name="id_anggota" value ="<?= $id_anggota; ?>" class="form-control" readonly>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Nama Anggota</label>
                   <div class="col-sm-10">
-                    <input type="text" name="nama_anggota"class="form-control" placeholder="Nama Anggota">
+                    <input type="text" name="nama_anggota"class="form-control" placeholder="Nama Anggota" required>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Jenis Kelamin</label>
                   <div class="col-sm-10">
-                    <select name="jenis_kelamin" class="form-control">
+                    <select name="jenis_kelamin" class="form-control" required>
                         <option value=""> - Pilih jenis kelamin - </option>
                         <option value="Laki-Laki"> Laki-Laki </option>
                         <option value="Perempuan"> Perempuan </option>
@@ -34,14 +34,14 @@
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-10">
-                    <textarea name="alamat" class = "form-control" cols="30" rows="5"></textarea>
+                    <textarea name="alamat" class = "form-control" cols="30" rows="5" required></textarea>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">Nomor Hp/Telepon</label>
                   <div class="col-sm-10">
-                    <input type="text" name="no_hp"class="form-control" placeholder="Nomor Hp/Telepon">
+                    <input type="text" name="no_hp"class="form-control" placeholder="Nomor Hp/Telepon"required>
                   </div>
                 </div>
 
