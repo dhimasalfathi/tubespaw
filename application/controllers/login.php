@@ -18,4 +18,11 @@ class Login extends CI_Controller
         $pass = $this->input->post('password');
         $this->m_login->proses_login($user, $pass);
     }
+
+    public function logout()
+    {
+        $this ->session->sess_destroy();
+        redirect('login');
+    }
+
 }

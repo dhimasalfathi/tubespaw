@@ -20,19 +20,28 @@
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
+
+            <li><a href="<?= base_url()?>anggota"><i class="fa fa-user"></i> Data Anggota</a></li>
+
             <li class="treeview">
                 <a href="#">
                     <i class="fa  fa-desktop"></i>
-                    <span>Data Master</span>
+                    <span>Master buku</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Anggota</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> buku</a></li>
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Pengarang</a></li>
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Penerbit</a></li>
+                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Buku</a></li>
                 </ul>
             </li>
+
+        <hr>
+        <li><a href="<?= base_url()?>login/logout"><i class="fa fa-sign-out"></i> logout</a></li>
+
+
         </ul>
     </section>
     <!-- /.sidebar -->
