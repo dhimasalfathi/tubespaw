@@ -12,6 +12,7 @@ class Anggota extends CI_Controller{
     {
         $isi['content'] = 'anggota/v_anggota';
         $isi['judul'] = 'Daftar Data Anggota';
+        $isi['data'] = $this->db->get('anggota')->result();
         $this->load->view('v_dashboard',$isi);
     }
 

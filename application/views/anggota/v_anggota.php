@@ -1,8 +1,4 @@
-<?php
-    if(!empty($this->session->('info'))){?>
-    <div class="alert alert-success" role="alert"><?= $this->session->flashdata('info');?></div> 
-    <?php}
-?>
+<div class="alert alert-success" role="alert">Data Berhasil Disimpan</div>
 
 <div class = row>
     <div class="col-md-12">
@@ -30,8 +26,8 @@
                 </thead>
 
                 <tbody>
+                   
                 
             </tbody>
         </table>
-    </div>
 </div>
