@@ -21,7 +21,7 @@
                 </a>
             </li>
 
-            <li><a href="<?= base_url()?>anggota"><i class="fa fa-user"></i> Data Anggota</a></li>
+            <li><a href="<?= base_url() ?>anggota"><i class="fa fa-user"></i> Data Anggota</a></li>
 
             <li class="treeview">
                 <a href="#">
@@ -32,14 +32,14 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?= base_url()?>pengarang"><i class="fa fa-circle-o"></i> Pengarang</a></li>
-                    <li><a href="<?= base_url()?>penerbit"><i class="fa fa-circle-o"></i> Penerbit</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Buku</a></li>
+                    <li><a href="<?= base_url() ?>pengarang"><i class="fa fa-circle-o"></i> Pengarang</a></li>
+                    <li><a href="<?= base_url() ?>penerbit"><i class="fa fa-circle-o"></i> Penerbit</a></li>
+                    <li><a href="<?= base_url() ?>buku"><i class="fa fa-circle-o"></i> Buku</a></li>
                 </ul>
             </li>
 
-        <hr>
-        <li><a href="<?= base_url()?>login/logout"><i class="fa fa-sign-out"></i> logout</a></li>
+            <hr>
+            <li><a href="<?= base_url() ?>login/logout"><i class="fa fa-sign-out"></i> logout</a></li>
 
 
         </ul>
