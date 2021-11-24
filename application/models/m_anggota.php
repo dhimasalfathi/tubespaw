@@ -34,7 +34,7 @@ class M_anggota extends CI_Model{
     public function hapus($id)
     {
         $this->db->where('id_anggota',$id);
-        $this->db->delete('anggota');
+        $this->db->delete('anggota'); 
     }
 }
 
