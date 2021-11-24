@@ -1,0 +1,22 @@
+<?php
+class M_penerbit Extends CI_Model{
+    
+    //Script php saat edit
+    public function edit($id){
+        $this->db->where('id_penerbit', $id);
+        return $this->db->get('penerbit')->row_array();
+    }
+
+    //Script php saat update
+    public function update($id_penerbit, $data){
+        $this->db->where('id_penerbit', $id_penerbit);
+        $this->db->update('penerbit', $data);
+    }
+
+    //Script pe-ha-pe saat hapus data
+    public function hapus($id){
+        $this->db->where('id_penerbit', $id);
+        $this->db->delete('penerbit');
+    }
+
+}
