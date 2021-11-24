@@ -32,7 +32,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Pengarang</a></li>
+                    <li><a href="<?= base_url()?>pengarang"><i class="fa fa-circle-o"></i> Pengarang</a></li>
                     <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Penerbit</a></li>
                     <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Buku</a></li>
                 </ul>
