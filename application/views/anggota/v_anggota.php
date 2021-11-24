@@ -1,4 +1,6 @@
-<div class="alert alert-success" role="alert">Data Berhasil Disimpan</div>
+<?php if ($this->session->flashdata('info')) { ?>
+        <div class="alert alert-success"> <?= $this->session->flashdata('info') ?> </div>
+    <?php } ?>
 
 <div class = row>
     <div class="col-md-12">
@@ -11,7 +13,6 @@
             <div class="box-header">
               <h3 class="box-title">Data Table With Full Features</h3>
             </div>
-            <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -24,10 +25,26 @@
                   <th>Aksi</th>
                 </tr>
                 </thead>
-
-                <tbody>
-                   
                 
+            <tbody>
+              <?php
+              foreach ($data as $row){
+                echo "
+                <tr>
+                  <td>$row->id_anggota</td>
+                  <td>$row->nama_anggota</td>
+                  <td>$row->jenis_kelamin</td>
+                  <td>$row->alamat</td>
+                  <td>$row->no_hp</td>
+                  <td>
+                  <a href='http://localhost/tubespaw/anggota/edit/$row->id_anggota' class= 'btn btn-success btn-xs'>Edit</a>
+                  <a href='http://localhost/tubespaw/anggota/hapus/$row->id_anggota' class= 'btn btn-danger btn-xs'>Hapus</a>
+                  </td>
+                  
+                </tr>";
+              }?>
             </tbody>
+
+               
         </table>
 </div>
