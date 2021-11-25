@@ -36,4 +36,20 @@ class M_peminjaman extends CI_Model
         $this->db->join('buku', 'peminjaman.id_buku = buku.id_buku');
         return $this->db->get()->result();
     }
+
+    public function getDataById_pm($id)
+    {
+        $this->db->select('*');
+        $this->db->from('peminjaman');
+        $this->db->join('anggota', 'peminjaman.id_anggota = anggota.id_anggota');
+        $this->db->join('buku', 'peminjaman.id_buku = buku.id_buku');
+        $this->db->where('peminjaman.id_pm',$id);
+        return $this->db->get()->row_array();
+    }
+
+    public function deletePm($id)
+    {
+        $this->db->where('id_pm',$id);
+        $this->db->delete('peminjaman');
+    }
 }

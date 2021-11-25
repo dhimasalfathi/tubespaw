@@ -48,7 +48,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="<?= base_url() ?>peminjaman"><i class="fa fa-circle-o"></i> Peminjaman</a></li>
-                    <li><a href="<?= base_url() ?>"><i class="fa fa-circle-o"></i> Pengembalian</a></li>
+                    <li><a href="<?= base_url() ?>pengembalian"><i class="fa fa-circle-o"></i> Pengembalian</a></li>
                 </ul>
             </li>
 

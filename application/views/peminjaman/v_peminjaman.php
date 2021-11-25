@@ -9,6 +9,9 @@
     </div>
 </div>
 <br>
+
+
+
 <div class="box">
     <div class="box-header">
         <h3 class="box-title">Isi Daftar Buku</h3>
@@ -50,7 +53,7 @@
                             ?>
                         </td>
                         <td>
-                            <a href="" class="btn btn-primary btn-xs">Kembalikan</a>
+                            <a href="<?= base_url()?>peminjaman/kembalikan/<?= $row->id_pm;?>" class="btn btn-primary btn-xs" onclick="return confirm('Yakin?')">Kembalikan</a>
                         </td>
                     </tr>
                 <?php }
