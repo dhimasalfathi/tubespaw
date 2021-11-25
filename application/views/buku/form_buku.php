@@ -41,7 +41,6 @@
                     <label for="inputPassword3" class="col-sm-2 control-label">Penerbit Buku</label>
                     <div class="col-sm-10">
                         <select name="id_penerbit" class="form-control select2">
-                            <option value=""> - Pilih Penerbit - </option>
                             <?php
                             foreach ($penerbit as $row) { ?>
                                 <option value="<?= $row->id_penerbit; ?>"><?= $row->nama_penerbit; ?></option>

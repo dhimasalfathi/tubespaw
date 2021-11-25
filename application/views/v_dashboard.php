@@ -33,6 +33,10 @@
     <link rel="stylesheet" href="<?= base_url() ?>/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <script src="<?= base_url() ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -91,7 +95,6 @@
     <!-- ./wrapper -->
 
 
-    <script src="<?= base_url() ?>assets/bower_components/jquery/dist/jquery.min.js"></script>
 
     <script src="<?= base_url() ?>assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
 
