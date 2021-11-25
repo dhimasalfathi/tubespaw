@@ -28,7 +28,33 @@
             </thead>
 
             <tbody>
-
+                <?php
+                foreach ($data as $row) {
+                    $tgl_kembali = new DateTime($row->tgl_kembali);
+                    $tgl_sekarang = new DateTime();
+                    $selisih = $tgl_sekarang->diff($tgl_kembali)->format("%a");
+                ?>
+                    <tr>
+                        <td><?= $row->id_pm; ?></td>
+                        <td><?= $row->nama_anggota; ?></td>
+                        <td><?= $row->judul_buku; ?></td>
+                        <td><?= $row->tgl_pinjam; ?></td>
+                        <td><?= $row->tgl_kembali; ?></td>
+                        <td>
+                            <?php
+                            if ($tgl_kembali >= $tgl_sekarang || $selisih == 0) {
+                                echo "<span class = 'label label-warning'> Belum Di Kembalikan";
+                            } else {
+                                echo "Telat <b style = 'color:red;'>" . $selisih . "</b> Hari <br> <span class = 'label label-danger'> Denda Perhari = Rp1.000";
+                            }
+                            ?>
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-primary btn-xs">Kembalikan</a>
+                        </td>
+                    </tr>
+                <?php }
+                ?>
             </tbody>
         </table>
     </div>
