@@ -44,4 +44,41 @@ class Buku extends CI_Controller
             redirect('buku');
         }
     }
+
+    public function edit($id)
+    {
+        $isi['content']     = 'buku/edit_buku';
+        $isi['judul']       = 'Form Edit Buku';
+        $isi['pengarang']   = $this->db->get('pengarang')->result();
+        $isi['penerbit']    = $this->db->get('penerbit')->result();
+        $isi['data']     = $this->m_buku->edit($id);
+        $this->load->view('v_dashboard', $isi);
+    }
+
+    public function update()
+    {
+        $id_buku = $this->input->post('id_buku');
+        $data = array(
+            'id_buku'       => $this->input->post('id_buku'),
+            'id_pengarang'  => $this->input->post('id_pengarang'),
+            'id_penerbit'   => $this->input->post('id_penerbit'),
+            'judul_buku'    => $this->input->post('judul_buku'),
+            'tahun_terbit'  => $this->input->post('tahun_terbit'),
+            'jumlah'        => $this->input->post('jumlah'),
+        );
+        $query = $this->m_buku->update($id_buku, $data);
+        if ($query = true) {
+            $this->session->set_flashdata('info', 'Data Berhasil Di Update');
+            redirect('buku');
+        }
+    }
+
+    public function hapus($id)
+    {
+        $query = $this->m_buku->hapus($id);
+        if ($query = true) {
+            $this->session->set_flashdata('info', 'Data Berhasil Di Hapus');
+            redirect('buku');
+        }
+    }
 }
