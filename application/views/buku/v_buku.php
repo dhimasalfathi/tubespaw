@@ -28,7 +28,22 @@
             </thead>
 
             <tbody>
-
+                <?php
+                foreach ($data->result() as $row) { ?>
+                    <tr>
+                        <td><?= $row->id_buku; ?></td>
+                        <td><?= $row->judul_buku; ?></td>
+                        <td><?= $row->nama_pengarang; ?></td>
+                        <td><?= $row->nama_penerbit; ?></td>
+                        <td><?= $row->tahun_terbit; ?></td>
+                        <td><?= $row->jumlah; ?></td>
+                        <td>
+                            <a href="<?= base_url() ?>buku/edit/<?= $row->id_buku; ?>" class="btn btn-success btn-xs">Edit</a>
+                            <a href="<?= base_url() ?>buku/hapus/<?= $row->id_buku; ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Dihapus?');">Hapus</a>
+                        </td>
+                    </tr>
+                <?php }
+                ?>
             </tbody>
         </table>
     </div>

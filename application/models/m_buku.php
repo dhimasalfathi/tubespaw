@@ -19,4 +19,13 @@ class M_buku extends CI_Model
         $kodejadi = "BK" . $kodemax;
         return $kodejadi;
     }
+
+    public function get_data_buku()
+    {
+        $this->db->select('*');
+        $this->db->from('buku');
+        $this->db->join('pengarang', 'buku.id_pengarang = pengarang.id_pengarang');
+        $this->db->join('penerbit', 'buku.id_penerbit = penerbit.id_penerbit');
+        return $this->db->get();
+    }
 }
