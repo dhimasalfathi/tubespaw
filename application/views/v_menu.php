@@ -52,6 +52,19 @@
                 </ul>
             </li>
 
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-file-text"></i>
+                    <span>Laporan</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?= base_url() ?>laporan/peminjaman"><i class="fa fa-circle-o"></i> Laporan Peminjaman</a></li>
+                </ul>
+            </li>
+
             <hr>
             <li><a href="<?= base_url() ?>login/logout"><i class="fa fa-sign-out"></i> logout</a></li>
 
