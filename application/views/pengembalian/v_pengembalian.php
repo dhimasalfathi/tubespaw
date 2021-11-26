@@ -17,16 +17,18 @@
 
             <tbody>
                 <?php
+                $no= 1;
                 foreach ($data as $row){?>
                 <tr>
-                    <td><?= $row->$no++;?></td>
-                    <td><?= $row->$nama_anggota;?></td>
-                    <td><?= $row->$judul;?></td>
-                    <td><?= $row->tgl_pinjam;?></td>
-                    <td><?= $row->tgl_kembali;?></td>
-                </tr>
-                <?php}
+                    <td><?= $no++;?></td>
+                    <td><?= $row->nama_anggota;?></td>
+                    <td><?= $row->judul_buku; ?></td>
+                    <td><?= $row->tgl_pinjam; ?></td>
+                    <td><?= $row->tgl_kembali; ?></td>
+                    <td><?= $row->tgl_kembalikan; ?></td>
 
+                </tr>
+                <?php }
                 ?>
                
             </tbody>
