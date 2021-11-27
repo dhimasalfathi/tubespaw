@@ -20,7 +20,7 @@
     <body>
     <div class="box">
     <div class="box-header">
-        <form>
+        <form method="post" action="<?= base_url()?>laporan/peminjaman">
             <div class="row">
                 <div class="col-md-3">
                     <h4 class="text-primary"><b>Filter Laporan Peminjaman</b></h4>
@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="col-md-2">
-                    <input type="text" name="tgl_ahir" class="form-control tgl_ahir" placeholder="Tanggal Ahir" onfocus="(this.type='date')">
+                    <input type="text" name="tgl_ahir" class="form-control tgl_ahir" placeholder="Tanggal Akhir" onfocus="(this.type='date')">
                 </div>
 
                 <div class="col-md-1">
@@ -39,18 +39,15 @@
                 </div>
 
                 <div class="col-md-2">
-                    <a href="" class="btn btn-warning btn-block btn-refresh"><i class="fa fa-refresh"></i> Refresh</a>
+                    <a href="<?= base_url()?>laporan/peminjaman" class="btn btn-warning btn-block btn-refresh"><i class="fa fa-refresh"></i> Refresh</a>
                 </div>
 
                 <div class="col-md-2">
-                    <a href="" class="btn btn-danger btn-block btn-PDF"><i class="fa fa-file-pdf-o"></i> View PDF</a>
+                    <a href="<?= base_url()?>laporan/pdf_peminjaman" class="btn btn-danger btn-block btn-PDF" target="_blank"><i class="fa fa-file-pdf-o"></i> View PDF</a>
                 </div>
 
 
             </div>
-            
-
-
 
         </form>
     </div>
@@ -63,13 +60,21 @@
                     <th>Buku</th>
                     <th>Tanggal Peminjaman</th>
                     <th>Tanggal Pengembalian</th>
-                    <th>Status</th>
-                    <th>Aksi</th>
                 </tr>
             </thead>
 
             <tbody>
-                
+                <?php
+                foreach($data as $row){?>
+                    <tr>
+                        <td><?= $row->id_pm; ?></td>
+                        <td><?= $row->nama_anggota; ?></td>
+                        <td><?= $row->judul_buku; ?></td>
+                        <td><?= mediumdate_indo($row->tgl_pinjam); ?></td>
+                        <td><?= mediumdate_indo($row->tgl_kembali); ?></td>
+                    </tr>
+                <?php }
+                ?>
             </tbody>
         </table>
     </div>
